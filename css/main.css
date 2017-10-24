@@ -8,6 +8,7 @@ header{
 	left: 0px;
 	top: 0px;
 	font-family: 'Montserrat', sans-serif;
+	z-index: 1000;
 }
 
 header span{
@@ -47,9 +48,9 @@ a:hover{
 
 .main{
 	background-color: #18BC9C;
-	width: 1250px;
+	width: 1355px;
 	height: 500px;
-	margin-left: 50px;
+	margin-left: -8px;
 	margin-top: 30px;
 	text-align: center;
 	padding-top: 80px;
@@ -70,15 +71,49 @@ h1{
 
 }
 
-hr{
 
+
+hr{
 	width: 100px;
-	background-color: #FFF;
 	padding: 2px;
 	border: 0px;
 	display: inline-block;
-
+	position: relative;
+	overflow: visible;
 }
+hr:before {
+    content: "\f005";
+    position: absolute;
+    top: -7px;
+    left: 50%;
+    
+    margin-left: -0.5em;
+    padding: 0 0.25em;
+    
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.hr-blanca{
+	background-color: #fff;
+	
+}
+.hr-blanca:before {
+    background-color: #18bc9c;
+    
+}
+
+.hr-negra{
+	background-color: #000;
+	
+}
+.hr-negra:before {
+    background-color: #fff;
+    
+}
+
+
 
 .portafolio{
 	background-color: #fff;
@@ -90,11 +125,11 @@ hr{
 	margin-top: 50px;
 }
 
-.negra{
-	background-color: #000;
-	border: 0px;
-	margin-left: 600px;
+
+.contactame {
+	text-align: center;
 }
+
 
 .primera{
 	background-color: #000;
@@ -127,9 +162,9 @@ article img:hover{
 .about{
 	text-transform: uppercase;
 	background-color: #18BC9C;
-	width: 1250px;
+	width: 1340px;
 	height: 450px;
-	margin-left: 40px;
+	margin-left: -8px;
 	text-align: center;
 	padding-top: 50px;
 	color: #FFF;
@@ -152,19 +187,22 @@ p{
 	font-family: 'Montserrat', sans-serif;
 	margin-right: 70px;
 	line-height: 24px;
+	margin-left: 50px;
 
 }
 
-.about em{
+.about .download{
 	text-align: center;
 	border: 3px #FFF solid;
-	margin:70px;
+	margin-left: 580px;
 	padding: 10px;
 	border-radius: 6px;
+	width: 180px;
+	margin-top: 200px;
 
 }	
 
-em:hover{
+.download:hover{
 	background: #FFF;
 	color: #18BC9C;
 	cursor: pointer;
@@ -183,7 +221,6 @@ section{
 input{
 	width: 800px;
 	height: 80px;
-	margin-left: 250px;
 	border: 0px;
     font-family: 'Montserrat', sans-serif;
     font-size: large;	
@@ -202,15 +239,17 @@ section .contacto-hr{
 	border: 0px;
 	background-color: #EEEEEE;
 	margin-bottom: 30px;
+	margin-top: 20px;
+
 }
 
 section span{
 	background-color: #18BC9C;
-	padding: 15px;
-	border-radius: 6px;
-	margin-left: 250px ;
-	color: #FFF;
-	font-family: 'Montserrat', sans-serif;
+    padding: 15px;
+    border-radius: 6px;
+    margin-left: -650px;
+    color: #FFF;
+    font-family: 'Montserrat', sans-serif;
 }
 
 section span:hover{
@@ -274,7 +313,13 @@ footer li:hover{
 
 footer .final{
     right: 200px;
-	margin-left: -240px;
-
+    padding-left: 450px;
 }
 
+footer .float {
+    width: 350px;
+    float: left;
+    text-align: center;
+    margin: 30px;
+    margin-left: 45px;
+}
